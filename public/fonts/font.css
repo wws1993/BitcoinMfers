@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'or';
+  font-display: fallback;
+  src: url('./ObjectSans-Regular.otf')
+}
+
+@font-face {
+  font-family: 'orb';
+  font-display: fallback;
+  src: url('./OBJECTSANS-BOLD.TTF')
+}
+
+@font-face {
+  font-family: 'os';
+  font-display: fallback;
+  src: url('./ObjectSans-Slanted.otf')
+}
+
+@font-face {
+  font-family: 'osb';
+  font-display: fallback;
+  src: url('./OBJECTSANS-BOLDSLANTED.TTF')
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-display: fallback;
+  src: url('./Outfit-VariableFont_wght.ttf')
+}
+
+@font-face {
+  font-family: 'Outfit-b';
+  font-display: fallback;
+  src: url('./Outfit-ExtraBold.ttf')
+}
+
+html,body,pre{font-family:'os' !important;}

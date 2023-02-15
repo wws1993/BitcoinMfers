@@ -1,0 +1,46 @@
+/*
+ * @Author: 武文帅 15696141050@163.com
+ * @Date: 2022-12-31 22:57:53
+ * @LastEditors: wws1993 15696141050@163.com
+ * @LastEditTime: 2023-02-15 16:28:48
+ * @FilePath: \BitcoinMfers\src\less\common.less
+ * @Description: less-common
+ * IE6腦殘粉
+ * Copyright (c) 2022 by wws1993<15696141050@163.com>, All Rights Reserved. 
+ */
+
+@import (reference) url('./mixins.less');
+
+div,span,p,section{box-sizing:border-box;}
+body,p,ul{margin:0;}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color:#fff;
+  background-color: #0d0d0d;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@ani: .3s;
+@logoSize:150px;
+.Home{.flex-col(); height:100%; padding-top:90px; overflow-y:auto;
+  &::-webkit-scrollbar{width:7px;}
+  &::-webkit-scrollbar-thumb{border:1px solid #ccc; border-radius:7px;}
+
+  .logo{width:@logoSize; height:@logoSize; border-radius:50%; background:#fff7; margin-bottom:20px;}
+  .title{.flex(space-around); width:240px; height:59px;
+    font-size:47px; line-height:59px; font-weight:bold; letter-spacing:.03em;
+
+    .icon{.hover(); transform:translateY(5px);}
+  }
+}
