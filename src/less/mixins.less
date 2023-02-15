@@ -1,8 +1,8 @@
 /*
  * @Author: 武文帅 15696141050@163.com
  * @Date: 2022-12-31 23:15:07
- * @LastEditors: yexx
- * @LastEditTime: 2023-02-15 18:24:12
+ * @LastEditors: 武文帅 15696141050@163.com
+ * @LastEditTime: 2023-02-16 00:07:51
  * @FilePath: \BitcoinMfers\src\less\mixins.less
  * @Description: less-mixin
  * IE6腦殘粉
@@ -37,9 +37,9 @@
 .els{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .elss(@row:2){
   overflow:hidden;
-  display:-webkit-box;//将元素设为盒子伸缩模型显示
-  -webkit-box-orient: vertical;//伸缩方向设为垂直方向
-  -webkit-line-clamp: @row;//超出3行隐藏，并显示省略号
+  display:-webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @row;
 }
 
 .hover{transition:@ani; cursor:pointer; opacity:1;
@@ -48,14 +48,11 @@
 .btn{.flex(); .hover(); border:1px solid #B3B3B3; border-radius:14px;}
 .btn-s{.btn(); border-radius:9px;}
 
-// 盒子hover
 .box-hover{transition:.3s; cursor:pointer;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   &:hover{.shadow(); border-color:transparent;}
 }
-// 阴影
 .shadow{box-shadow:0px 4px 18px rgba(0, 0, 0, 0.08);}
-// 选择器
 .select{background-color: #000;border: 1px solid rgba(255, 255, 255, 0.12);border-radius: 12px;
   color: #fff;padding: 8.5px 10px;
   &:focus-visible {

@@ -8,7 +8,6 @@ const _resolve = (dir: string) => path.resolve(__dirname, dir)
 export default defineConfig({
   base: '/',
   plugins: [react()],
-  // 配置项目别名
   resolve: {
     alias: {
       '@': _resolve('src'),

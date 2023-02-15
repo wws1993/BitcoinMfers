@@ -1,4 +1,4 @@
 export default {
-  /** L2网络id */
+  /** chain id */
   chainId: 534354
 }
