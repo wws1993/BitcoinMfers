@@ -2,7 +2,7 @@
  * @Author:武文帅 15696141050@163.com
  * @Date:2022-12-31 22:57:53
  * @LastEditors: 武文帅 15696141050@163.com
- * @LastEditTime: 2023-02-15 22:54:45
+ * @LastEditTime: 2023-02-16 00:04:27
  * @FilePath: \BitcoinMfers\src\less\common.less
  * @Description:less-common
  * IE6腦殘粉
@@ -66,7 +66,8 @@ html,body,#root{height:100%;}
       border-radius:12px; border:1px solid #FFFFFF1F;
       &:hover{.options{max-height:8em; opacity:1;}}
 
-      .options{.abs(); .flex-col(); top:calc(100% + 5px); width:100%; border:1px solid #FFFFFF1F;
+      .options{.abs(); .flex-col(); top:calc(100% + 5px); z-index:9; width:100%; border:1px solid #FFFFFF1F;
+        background:#0007; backdrop-filter:blur(16px); border-radius:12px;
         opacity:0; max-height:0; overflow:hidden; transition:.05s @ani;
         span{text-indent:12px}
       }

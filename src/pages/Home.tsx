@@ -51,7 +51,7 @@ export default () => {
     <div className="logo"></div>
     <div className="title">
       <span>mfers</span>
-      <img className='icon' src={svg_dc} alt="svg_dc" onClick={() => window.open(frendslinkConfig.discord)} />
+      {/* <img className='icon' src={svg_dc} alt="svg_dc" onClick={() => window.open(frendslinkConfig.discord)} /> */}
       <img className='icon' src={svg_twitter} alt="svg_twitter" onClick={() => window.open(frendslinkConfig.twitter)} />
     </div>
     <p className='subtitle'>The first 10k NFT collection on Bitcoin</p>
