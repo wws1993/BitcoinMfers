@@ -109,7 +109,7 @@ export default () => {
 
           <div className="steps">
             {steps.map((item, idx) => <div
-              key={item.t}
+              key={idx}
               className={classNames(
                 'steps-item',
                 (states.activeNFT?.activeSteps || 0) >= idx && 'active',
