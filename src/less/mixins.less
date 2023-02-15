@@ -1,9 +1,9 @@
 /*
  * @Author: 武文帅 15696141050@163.com
  * @Date: 2022-12-31 23:15:07
- * @LastEditors: 武文帅 15696141050@163.com
- * @LastEditTime: 2023-01-14 15:55:31
- * @FilePath: \SNSdomains\src\less\mixins.less
+ * @LastEditors: yexx
+ * @LastEditTime: 2023-02-15 18:24:12
+ * @FilePath: \BitcoinMfers\src\less\mixins.less
  * @Description: less-mixin
  * IE6腦殘粉
  * Copyright (c) 2022 by wws1993<15696141050@163.com>, All Rights Reserved. 
@@ -55,3 +55,18 @@
 }
 // 阴影
 .shadow{box-shadow:0px 4px 18px rgba(0, 0, 0, 0.08);}
+// 选择器
+.select{background-color: #000;border: 1px solid rgba(255, 255, 255, 0.12);border-radius: 12px;
+  color: #fff;padding: 8.5px 10px;
+  &:focus-visible {
+    outline: 1px solid @mainColor;
+  }
+}
+.input{
+  background-color: #000;width: 860px;border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;padding: 6px 10px;cursor: pointer;
+  &:focus-visible {
+    outline: 1px solid @mainColor;
+  }
+
+}
