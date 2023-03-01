@@ -54,9 +54,8 @@ export default (): IServerList => {
     setBaseResquestInterceptors: (createBaseConfig) => {
       RequestServer.interceptors.request.use(async config => {
         const baseConfig = createBaseConfig(config)
-        config = {...config, ...baseConfig}
 
-        return config
+        return {...config, ...baseConfig} as any
       })
     },
     setBaseResponseInterceptors: (interceptor) => {
