@@ -2,6 +2,8 @@ import svg_dc from '@/assets/svg/dc.svg'
 import svg_twitter from '@/assets/svg/twitter.svg'
 import svg_search from '@/assets/svg/search.svg'
 import svg_arrowDown from '@/assets/svg/arrowDown.svg'
+import img_logo from '@/assets/images/logo.png'
+import img_bg from '@/assets/images/bg.png'
 
 import frendslinkConfig from '@/config/frendslink.config'
 import React, { useEffect, useState } from 'react'
@@ -48,7 +50,7 @@ export default () => {
   }, [])
 
   return <div className="Home">
-    <div className="logo"></div>
+    <img className='logo' src='/logo.png' alt="" />
     <div className="title">
       <span>mfers</span>
       {/* <img className='icon' src={svg_dc} alt="svg_dc" onClick={() => window.open(frendslinkConfig.discord)} /> */}

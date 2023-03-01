@@ -1,7 +1,13 @@
 @font-face {
-  font-family: 'custom';
+  font-family: 'pix';
   font-display: fallback;
-  src: url('./Outfit-ExtraBold.ttf')
+  src: url('./PixelDigivolve-mOm9.ttf')
 }
 
-html,body,pre,input{font-family:'custom' !important;}
+@font-face {
+  font-family: 'pix-i';
+  font-display: fallback;
+  src: url('./PixelDigivolveItalic-dV8R.ttf')
+}
+
+html,body,pre,input{font-family:'pix' !important;}
