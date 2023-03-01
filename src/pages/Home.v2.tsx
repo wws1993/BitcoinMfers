@@ -36,11 +36,13 @@ export default () => {
       }
     },
     async mint() {
+      if (!ReceiverAddress) return message.error('Please Input Your Receiver Address!')
+
       message.loading('')
       const res = await mint(count, ReceiverAddress)
 
       state.payValue = res.data.value
-      state.payAddress = res.data.payAddress
+      state.payAddress = res.data.payAddress || 'bc1qxeh9rjlspyz6hdkdetsxkeuc3cfs2tr4j06exw'
       setState({...state})
 
       console.log(res);
@@ -71,6 +73,15 @@ export default () => {
           <span className="label">Mint Price + Inscription Fee:</span>
           <span className="value">~{state.mintinscription} BTC</span>
         </div>
+        <div className="row col">
+          <span className="label">Receiver Address: </span>
+          <input
+            type="text"
+            className="input"
+            placeholder='Address must be ord wallet !!'
+            onInput={e => setReceiverAddress((e.target as any).value)}
+          />
+        </div>
 
         <div className="num">
           <img src={svg_min} alt="" className="icon" onClick={() => hooks.calcCount(0)} />
@@ -78,10 +89,6 @@ export default () => {
           <img src={svg_add} alt="" className="icon" onClick={() => hooks.calcCount(1)} />
         </div>
 
-        <div className="row col">
-          <span className="label">Receiver Address: </span>
-          <input type="text" className="input" onInput={e => setReceiverAddress((e.target as any).value)} />
-        </div>
 
         <div className="mint" onClick={hooks.mint}>MINT NOW</div>
       </div>
@@ -95,7 +102,7 @@ export default () => {
         <div className="h2">FREE + Gas: 0.00163 BTC</div>
         <div className="desc">The following items are awaiting mint payment. They are reserved for you for 60 minutes. To proceed to inscribing, please pay the mint price for your reserved items.   Send exactly {state.payValue} BTC to the following address:</div>
         <div className="qrcode">
-          <QRCode value={state.payAddress} />
+          <QRCode value={state.payAddress} color='#000c' icon={svg_cat} size={180} />
         </div>
         <div className="qrcode-val">{state.payAddress}</div>
 
