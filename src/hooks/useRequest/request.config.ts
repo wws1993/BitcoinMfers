@@ -1,4 +1,4 @@
 export default {
-  baseURL: '',
+  baseURL: '/apis',
   timeout: 1000 * 60 * 3
 }

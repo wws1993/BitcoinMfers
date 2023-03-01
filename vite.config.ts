@@ -14,4 +14,13 @@ export default defineConfig({
       '@img': _resolve('src/assets'),
     },
   },
+  server: {
+    proxy: {
+      '/apis': {
+        target: "http://34.204.199.168:8080",
+        changeOrigin: true,
+        rewrite: (path: string) => path.replace(/^\/apis/, "")
+      },
+    }
+  },
 })

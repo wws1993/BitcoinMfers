@@ -1,8 +1,7 @@
 {
-  "name": "@moretime/home",
-  "description": "闲暇主站",
-  "version": "1.0.0",
-  "type": "module",
+  "name": "bitcoin_cats",
+  "description": "",
+  "version": "3.1.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
