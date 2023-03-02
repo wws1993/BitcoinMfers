@@ -2,7 +2,7 @@
  * @Author: 武文帅 15696141050@163.com
  * @Date: 2022-12-31 16:51:33
  * @LastEditors: wws1993 15696141050@163.com
- * @LastEditTime: 2023-03-01 17:29:59
+ * @LastEditTime: 2023-03-02 17:38:47
  * @FilePath: \BitcoinMfers\src\main.tsx
  * @Description: 根目录
  * IE6腦殘粉
@@ -26,7 +26,7 @@ const routeMap = [
 
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
   <HashRouter>
-    <ConfigProvider theme={{token: { colorPrimary: '#f00c' }}}>
+    <ConfigProvider theme={{token: { colorPrimary: '#00bcd4' }}}>
       <Layout>
         <Routes>
           {routeMap.map(item => <Route path={item.p} key={item.p} element={ item.c } />)}
