@@ -63,7 +63,7 @@ export default () => {
       </div>
 
       <div className="card">
-        <img src={svg_cat} alt="" className="cat" />
+        <video className="cat" src="/logo.mp4" muted autoPlay></video>
 
         <div className="row">
           <span className="label">SUPPLY:</span>
