@@ -17,7 +17,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/apis': {
-        target: "http://34.204.199.168:8081",
+        target: "http://www.bitpixelcats.com:8081",
         changeOrigin: true,
         rewrite: (path: string) => path.replace(/^\/apis/, "")
       },

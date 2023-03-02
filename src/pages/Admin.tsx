@@ -1,5 +1,5 @@
 import useRequest, { OrderStatus } from '@/hooks/useRequest';
-import { Button, Select, Table } from 'antd';
+import { Button, message, Select, Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { useEffect, useState } from 'react';
 import testImage from '@/assets/images/bg.png'
@@ -45,10 +45,20 @@ export default () => {
     status: undefined
   })
   const [data, setData] = useState<API.order.entry[]>([])
+  const [lock, setLock] = useState(true)
 
   const hooks = {
     query: async () => {
-      return setData(new Array(100).fill({
+      try {
+        message.loading('requesting...', 0)
+        const res = await operateBatchQuery(params)
+        setData([...res.data])
+
+        message.destroy()
+      } catch (error) {
+        console.log(error);
+
+        return setData(new Array(100).fill({
           /** 订单id */
           id: 'bc1qxeh9rjlspyz6hdkdetsxkeuc3cfs2tr4j06exw',
           /** 创建时间 */
@@ -81,18 +91,23 @@ export default () => {
             inscriptionHash: 'bc1qxeh9rjlspyz6hdkdetsxkeuc3cfs2tr4j06exw',
           }]
       }))
-      try {
-        const res = await operateBatchQuery(params)
-        setData([...res.data])
-      } catch (error) {
-        console.log(error);
       }
     }
   }
 
-  useEffect(() => { hooks.query() }, [])
+  useEffect(() => {
+    const key = 'B582CD7763FA264B8B72FC378C226AEC'
+    const sk = '3F50A0539C7E6CE421B715161612ECFD'.split('').reverse().join('')
 
-  return <div className="admin">
+    // window.localStorage.setItem('B582CD7763FA264B8B72FC378C226AEC', 'DFCE216161517B124EC6E7C9350A05F3')
+
+    if (window.localStorage.getItem(key) === sk) {
+      setLock(false)
+      hooks.query()
+    }
+  }, [])
+
+  return !lock ? <div className="admin">
     <h1 className="title">Order Statistics</h1>
 
     <div className="filter">
@@ -118,7 +133,6 @@ export default () => {
       className='table'
       columns={columns}
       dataSource={data}
-      sticky
     />
-  </div>
+  </div> : <></>
 };
