@@ -63,7 +63,7 @@ export default () => {
       </div>
 
       <div className="card">
-        <video className="cat" src="/logo.mp4" muted autoPlay></video>
+        <video className="cat" src="/logo.mp4" muted autoPlay loop></video>
 
         <div className="row">
           <span className="label">SUPPLY:</span>
