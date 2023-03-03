@@ -88,10 +88,10 @@ export default () => {
         <video className="cat" src="/logo.mp4" muted autoPlay loop></video>
         <div className="mint" onClick={hooks.mint}>MINT NOW</div>
 
-        <div className="row">
+        {/* <div className="row">
           <span className="label">Supply:</span>
           <span className="value">{state.maxMintCount}/10000</span>
-        </div>
+        </div> */}
         {/* <div className="row">
           <span className="label">Mint Price + Inscription Fee:</span>
           <span className="value">~{state.mintinscription} BTC</span>
